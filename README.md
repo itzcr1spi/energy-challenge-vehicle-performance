@@ -1,69 +1,77 @@
 # Energy Challenge | Vehicle Performance & Energy Optimisation
 
-A vehicle-performance project focused on understanding and improving energy use through aerodynamic analysis, testing and vehicle energy modelling.
+An Automotive Engineering case study focused on reducing the energy consumption of a model vehicle through aerodynamic evaluation, rolling-resistance testing, drivetrain analysis and Tank-to-Wheel energy modelling.
 
 > **Publication note**  
-> This repository contains my own documentation, recreated diagrams and approved visuals. It does not include restricted project files, shared team code, university assessment material or non-public test data.
+> This repository contains my own portfolio documentation, recreated diagrams and simplified examples. It excludes course submission material, shared team code, raw datasets and non-public test files.
 
-## Overview
+## Objective
 
-The Energy Challenge focused on improving vehicle efficiency by investigating the factors that influence energy consumption.
+The project investigated the main sources of vehicle energy loss and translated experimental findings into an energy-efficient driving strategy.
 
-My work involved combining theoretical analysis with practical testing. This included aerodynamic evaluation, coast-down testing and energy modelling to better understand how vehicle design and operating conditions affect performance.
+The analysis combined aerodynamics, rolling resistance, drivetrain efficiency and control-system considerations to estimate the battery energy required at the wheels.
 
 ## My Contribution
 
-Key areas of my involvement included:
+I contributed to the vehicle-performance analysis, energy modelling and engineering software work within a multidisciplinary team.
 
-- Supporting aerodynamic analysis and evaluating its effect on vehicle efficiency.
-- Participating in wind-tunnel testing and interpreting the resulting observations.
-- Contributing to coast-down testing to estimate real-world resistance effects.
-- Developing or supporting a vehicle energy model to analyse energy consumption.
-- Applying programming and control concepts where relevant to vehicle operation and performance.
-- Working with other team members to connect test results with engineering decisions.
+My work supported the connection between measured vehicle behaviour, the Tank-to-Wheel model and practical driving-strategy decisions.
 
-## Engineering Approach
+## Engineering Methods
 
-Vehicle energy use is influenced by several connected factors:
+### Aerodynamic Analysis
 
-```text
-Aerodynamics + Rolling Resistance + Vehicle Mass + Driving Strategy
-                              ↓
-                    Energy Consumption
-                              ↓
-                   Vehicle Range / Efficiency
-```
-
-The project used practical testing and modelling to evaluate these factors and identify opportunities for improvement.
-
-## Testing and Analysis
-
-### Aerodynamic Evaluation
-
-Aerodynamic work examined how airflow-related effects influence the energy required to drive the vehicle. Wind-tunnel testing supported the evaluation of design decisions and assumptions used in analysis.
+Wind-tunnel data was used to compare four vehicle configurations and determine their effective drag area. The final configuration combined a bottom plate with wheel covers.
 
 ### Coast-Down Testing
 
-Coast-down testing was used to observe vehicle deceleration behaviour and help estimate resistance forces acting on the vehicle during operation.
+Repeated coast-down runs were performed on a level surface. Speed-time data was processed in MATLAB to estimate deceleration and determine the rolling-resistance coefficient.
 
-### Energy Modelling
+### Drivetrain Analysis
 
-A vehicle energy model connected engineering assumptions with expected energy consumption, allowing different conditions and design choices to be compared.
+Dynamometer results were used to evaluate drivetrain losses and identify the efficiency behaviour across operating conditions.
+
+### Tank-to-Wheel Energy Model
+
+A Tank-to-Wheel model combined rolling resistance, aerodynamic drag and drivetrain efficiency to estimate energy consumption per distance and per lap.
+
+```text
+Aerodynamic drag + Rolling resistance + Drivetrain losses
+                           ↓
+               Tank-to-Wheel energy model
+                           ↓
+             Driving-strategy recommendations
+```
+
+## Selected Results
+
+- The full aerodynamic package reduced drag from **1.67 N** to **1.58 N** at approximately **9.5 m/s**: an improvement of about **5.5%**.
+- Coast-down testing produced an average rolling-resistance coefficient of approximately **0.042**.
+- The associated rolling-resistance force was approximately **4.97 N** under the tested conditions.
+- With the drivetrain engaged, effective resistance increased to approximately **5.91 N**, demonstrating that drivetrain losses were significant.
+- Dynamometer analysis identified a higher-efficiency region in the mid-range of speed and torque, with peak efficiency around **0.7**.
+
+## Key Engineering Insight
+
+The most energy-efficient strategy was not simply to drive at the lowest possible speed.
+
+The model showed that unnecessary acceleration and stop-start driving were energy-intensive, while steady driving near an efficient drivetrain operating region could reduce overall Tank-to-Wheel energy use.
 
 ## Technologies and Methods
 
-Vehicle Performance · Aerodynamics · Wind-Tunnel Testing · Coast-Down Testing · Energy Modelling · Data Analysis · Programming
+MATLAB · Vehicle Energy Modelling · Wind-Tunnel Data Analysis · Coast-Down Testing · Dynamometer Testing · Vehicle Control · Embedded Systems
 
 ## Repository Contents
 
-- `docs/` — project context, engineering approach and testing summaries
-- `assets/` — recreated diagrams and approved photos or screenshots
-- `examples/` — simplified, independently written analysis examples where appropriate
+- `docs/` — technical case-study notes and methodology
+- `assets/` — recreated diagrams and approved visuals
+- `examples/` — simplified, independently written analysis examples
+- `README.md` — project overview and selected findings
 
 ## Key Learning Outcomes
 
-- Connecting aerodynamic behaviour with vehicle energy consumption
-- Planning and interpreting practical vehicle-performance tests
-- Using models to support engineering decisions
-- Comparing theoretical assumptions against measured vehicle behaviour
-- Working across analysis, testing and multidisciplinary collaboration
+- Translating measured vehicle data into an engineering model
+- Comparing aerodynamic configurations using experimental evidence
+- Estimating rolling resistance from coast-down data
+- Accounting for drivetrain efficiency in vehicle-energy analysis
+- Using modelling and test results to guide vehicle-control decisions
